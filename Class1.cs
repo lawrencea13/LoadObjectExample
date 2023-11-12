@@ -35,6 +35,8 @@ namespace LoadObjectExample
             // these 2 lines are important
             UnityEngine.Object.DontDestroyOnLoad(gameObject);
             gameObject.hideFlags = HideFlags.HideAndDontSave;
+
+            // add component and create local reference
             gameObject.AddComponent<ObjectToLoad>();
             myLoadedObject = (ObjectToLoad)gameObject.GetComponent("ObjectToLoad");
 
